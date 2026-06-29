@@ -1,3 +1,5 @@
+from runtime.panther_plugins import PantherPluginSystem
+
 class PantherSurface:
     """
     Panther-OS Command Surface
