@@ -15,6 +15,19 @@ import csv
 import json
 import os
 import tempfile
+from runtime.dispatcher import Dispatcher
+from skills.chat.chat_skill import ChatSkill
+from skills.tasks.task_skill import TaskSkill
+from skills.health.health_skill import HealthSkill
+from skills.system.system_skill import SystemSkill
+
+self.dispatcher = Dispatcher({
+    "chat": ChatSkill(),
+    "tasks": TaskSkill(),
+    "health": HealthSkill(),
+    "system": SystemSkill(),
+})
+
 from dataclasses import dataclass, asdict
 from datetime import datetime
 from typing import List, Dict, Optional
